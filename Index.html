@@ -246,8 +246,8 @@
                     if(ci++ <= str.length) setTimeout(step, delay);
                     else { forward=false; setTimeout(step, pause);} 
                 } else {
-                    if(ci-->0) setTimeout(step, 40);
-                    else { forward=true; si=(si+1)%strings.length; setTimeout(step, 200);} 
+                    if (ci-- > 0) setTimeout(step, 40);
+                    else { forward = true; si = (si + 1) % strings.length; setTimeout(step, 200); }
                 }
             }
             step();
